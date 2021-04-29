@@ -8,6 +8,7 @@ class TodolistsController < ApplicationController
     redirect_to todolist_path(list.id)
   end
   def index
+    puts "作成したキー #{ENV['SECRET_KEY']}"
     @lists = List.all
   end
 
